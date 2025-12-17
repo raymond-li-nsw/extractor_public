@@ -40,8 +40,6 @@ Costing Collaborative Space Access:
 
 This is the ABM secured network space where the Extractor v2 executable is located.
 
-Access requests should be directed to Kylie Hawkins, Manager, Clinical Cost Data Collections and Standards (kylie.hawkins2@health.nsw.gov.au).
-
 2.2 Download & Unzip Extractor v2 Executable
 
 Navigate to the Costing Collaborative Space > EDW Extractor Testing folder to download the Extractor v2 zip file. This folder also contains this User Guide and a Checklist.
