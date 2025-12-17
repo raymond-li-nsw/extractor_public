@@ -1,0 +1,165 @@
+facility_identifier,facility_name,EmergRoleDelin,area_identifier
+Q230,John Hunter Hospital,6,X800
+A207,The Children's Hospital at Westmead,6,X630
+C238,Sydney Children's Hospital,6,X630
+A212,"St Vincent's Hospital, Darlinghurst",6,X690
+A202,Canterbury Hospital,4,X700
+A208,Royal Prince Alfred Hospital,6,X700
+A237,Concord Hospital,5,X700
+D205,Camden Hospital,2,X710
+D206,Fairfield Hospital,4,X710
+D209,Liverpool Hospital,6,X710
+D215,Campbelltown Hospital,4,X710
+D227,Bankstown / Lidcombe Hospital,5,X710
+N219,Bowral and District Hospital,3B,X710
+A216,Sydney Hospital,3A,X720
+A231,Sydney Eye Hospital,3A,X720
+A233,Sydney Hospital,3A,X720
+C208,Prince of Wales Hospital,6,X720
+C213,St George Hospital,6,X720
+C214,Sutherland Hospital,5,X720
+P202,Bulli District Hospital,2,X730
+P205,Milton and Ulladulla Hospital,2,X730
+P207,Shoalhaven and District Memorial Hospital,4,X730
+P208,Wollongong Hospital,6,X730
+P211,Shellharbour Hospital,3B,X730
+D201,Auburn Hospital,4,X740
+D203,Blacktown Hospital,5,X740
+D218,Mount Druitt Hospital,4,X740
+D224,Westmead Hospital,6,X740
+D204,Blue Mountains District Anzac Memorial Hospital,3B,X750
+D210,Nepean Hospital,5,X750
+D311,Hawkesbury District Health Service,4,X750
+L213,Lithgow Health Service,3B,X750
+B210,Hornsby and Ku-Ring-Gai Hospital,4,X760
+B212,Manly District Hospital,4,X760
+B214,Mona Vale and District Hospital,4,X760
+B218,Royal North Shore Hospital,6,X760
+B224,Ryde Hospital,3B,X760
+B202,Gosford Hospital,5,X770
+B206,Wyong Hospital,3B,X770
+J201,Armidale and New England Hospital,4,X800
+J202,Barraba Multi-Purpose Service,2,X800
+J203,Bingara Multi-Purpose Service,2,X800
+J204,Boggabri Multi-Purpose Service,2,X800
+J205,Glen Innes District Hospital,2,X800
+J206,Gunnedah District Hospital,3A,X800
+J207,Guyra Multi-Purpose Service,2,X800
+J208,Inverell District Hospital,3A,X800
+J211,Manilla Multi-Purpose Service,2,X800
+J212,Moree District Hospital,3A,X800
+J213,Narrabri District Hospital,3A,X800
+J214,"Prince Albert Memorial, Tenterfield",2,X800
+J215,Quirindi Community Hospital,2,X800
+J216,Tamworth Base Hospital,5,X800
+J217,Tingha Multi-Purpose Service,1,X800
+J218,Emmaville - Vegetable Creek Multi-Purpose Service,1,X800
+J219,Walcha Multi-Purpose Service,2,X800
+J220,Warialda Multi-Purpose Service,2,X800
+J221,Wee Waa District Hospital,2,X800
+J222,Werris Creek Multi-Purpose Service,1,X800
+J224,Gloucester Soldier's Memorial Hospital - Hospital Unit,2,X800
+J225,Manning Base Hospital,4,X800
+Q202,Cessnock District Hospital,3B,X800
+Q203,Dungog District Hospital,2,X800
+Q205,Kurri Kurri District Hospital,1,X800
+Q206,Maitland Hospital,4,X800
+Q208,Merriwa Multi-Purpose Service,2,X800
+Q209,Muswellbrook District Hospital,4,X800
+Q210,Denman Multi-Purpose Service,1,X800
+Q211,Calvary Mater Newcastle,5,X800
+Q214,Belmont Hospital,3B,X800
+Q216,"Scott Memorial Hospital, Scone",2,X800
+Q217,Singleton District Hospital,3A,X800
+Q219,"Wilson Memorial Hospital, Murrurundi",1,X800
+Q225,Tomaree Community Hospital,1,X800
+H201,Ballina District Hospital,4,X810
+H206,Casino and District Memorial Hospital,3,X810
+H207,Bonbalbo Multi-Purpose Service,1,X810
+H210,Grafton Base Hospital,3,X810
+H213,Kyogle Multi-Purpose Service,2,X810
+H214,Lismore Base Hospital,5,X810
+H215,Nimbin Multi-Purpose Service,1,X810
+H217,Maclean District Hospital,3,X810
+H221,Murwillumbah District Hospital,3,X810
+H223,The Tweed Hospital,5,X810
+H224,Urbenville,1,X810
+H293,Byron Central Hospital,3,X810
+H203,Bellinger River,2,X820
+H208,Coffs Harbour Base Hospital,5,X820
+H209,Dorrigo,2,X820
+H212,Kempsey Hospital,3B,X820
+H216,Macksville,3A,X820
+H225,Wauchope,9,X820
+H272,Port Macquarie Base Hospital,5,X820
+N201,Bateman's Bay District Hospital,2,X830
+N202,South East Regional Hospital (SERH),3B,X830
+N203,Bombala Multi-Purpose Service,9,X830
+N205,Braidwood Multi-Purpose Service,9,X830
+N206,Cooma Health Service,3A,X830
+N207,Crookwell Health Service,,X830
+N208,Delegate Multi-Purpose Service,9,X830
+N209,Goulburn Base Hospital,4,X830
+N211,Moruya District Hospital,2,X830
+N214,Pambula District Hospital,,X830
+N215,Queanbeyan,3B,X830
+N217,Yass Health Service,,X830
+L212,Lake Cargelligo Multi-Purpose Service,2,X840
+L226,Wyalong Health Service,2,X840
+M203,Barham Multi-Purpose Service,2,X840
+M204,Berrigan Multi-Purpose Service,2,X840
+M205,Culcairn Multi-Purpose Service,2,X840
+M206,Corowa Multi-Purpose Service,3,X840
+M207,Deniliquin Health Service,3,X840
+M208,Finley Health Service,2,X840
+M209,Henty Multi-Purpose Service,2,X840
+M210,Holbrook Multi Purpose Service,2,X840
+M211,Jerilderie Multi-Purpose Service,2,X840
+M213,Urana Multi-Purpose Service,2,X840
+M214,Tocumwal Multi-Purpose Service,2,X840
+M215,Tumbarumba Multi-Purpose Service,2,X840
+N204,Boorowa Multi-Purpose Service,2,X840
+N213,Murrumburrah-Harden Multi-Purpose Service,2,X840
+N218,Young Health Service,3,X840
+R202,Batlow/Adelong Multi-Purpose Service,2,X840
+R205,Griffith Base Hospital,4,X840
+R206,Gundagai Multi-Purpose Service,2,X840
+R207,Hay Health Service,2,X840
+R208,Hillston Multi-Purpose Service,2,X840
+R209,Junee Multi-Pupose Service,2,X840
+R210,Coolamon Multi-Purpose Service,2,X840
+R211,Leeton Health Service,3,X840
+R213,Lockhart Multi-Purpose Service,2,X840
+R215,Narrandera Health Service,3,X840
+R216,Temora Health Service,2,X840
+R218,Tumut Health Service,3,X840
+R219,Wagga Wagga Base Hospital,5,X840
+R221,Cootamundra Health Service,3,X840
+K201,Bourke Multi-Purpose Service,9,X850
+K202,Brewarrina Multi-Purpose Service,9,X850
+K203,Cobar District Hospital,,X850
+K204,Collarenebri Multi-Purpose Service,9,X850
+K206,Coonabarabran District Hospital,,X850
+K207,Baradine Multi-Purpose Service,9,X850
+K209,Coonamble Multi-Purpose Service,9,X850
+K210,Gulargambone Multi-Purpose Service,9,X850
+K211,Dubbo Base Hospital,4,X850
+K213,Gilgandra Multi-Purpose Service,9,X850
+K215,Gulgong Multi-Purpose Service,9,X850
+K216,Mudgee,2,X850
+K217,Narromine District Hospital,,X850
+K218,Nyngan Multi-Purpose Service,9,X850
+K220,Walgett Multi-Purpose Service,9,X850
+K221,Warren Multi-Purpose Service,9,X850
+K222,"Wellington Hospital, Bindawalla",,X850
+K231,Lightning Ridge Multi-Purpose Service,9,X850
+L201,Bathurst Base Hospital,4,X850
+L202,Blayney Multi-Purpose Service,9,X850
+L206,Cowra,3A,X850
+L209,Forbes,3A,X850
+L214,Molong District Hospital,,X850
+L216,Orange Health Service,4,X850
+L217,Parkes,3A,X850
+L221,Rylstone Multi-Purpose Service,9,X850
+S201,Broken Hill Base Hospital,3B,X860
+M201,Albury Base Hospital,4,X921

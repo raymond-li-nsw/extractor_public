@@ -1,0 +1,1 @@
+"Facility_Identifier","Stay_number","episode_sequence_number","Ed_identifier","SNAP_encounter","Reason For Exclusion","EncounterNumber"

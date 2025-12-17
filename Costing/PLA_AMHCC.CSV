@@ -1,0 +1,46 @@
+ClassCode,ClassDescription,PLACode
+101Z,"Admitted, Initial assessment, 0-17 years",31011
+102Z,"Admitted, Initial assessment, 18-64 years",31021
+103Z,"Admitted, Initial assessment, 65+ years",31031
+111A,"Admitted, Acute, 0-17 years, High HoNOS complexity",31011
+111B,"Admitted, Acute, 0-17 years, Moderate HoNOS complexity",31011
+111Z,"Admitted, Acute, 0-17 years, Unknown HoNOS",31011
+1121A,"Admitted, Acute, 18-64 years, Involuntary, High HoNOS complexity",31021
+1121B,"Admitted, Acute, 18-64 years, Involuntary, Moderate HoNOS complexity",31021
+1121Z,"Admitted, Acute, 18-64 years, Involuntary, Unknown HoNOS",31021
+1122A,"Admitted, Acute, 18-64 years, Voluntary, High HoNOS complexity",31021
+1122B,"Admitted, Acute, 18-64 years, Voluntary, Moderate HoNOS complexity",31021
+1122Z,"Admitted, Acute, 18-64 years, Voluntary, Unknown HoNOS",31021
+113A,"Admitted, Acute, 65+ years, High HoNOS complexity",31031
+113B,"Admitted, Acute, 65+ years, Moderate HoNOS complexity",31031
+113Z,"Admitted, Acute, 65+ years, Unknown HoNOS",31031
+121A,"Admitted, Functional gain, 0-17 years, High HoNOS complexity",31011
+121B,"Admitted, Functional gain, 0-17 years, Moderate HoNOS complexity",31011
+121Z,"Admitted, Functional gain, 0-17 years, Unknown HoNOS",31011
+122A,"Admitted, Functional gain, 18-64 years, High HoNOS complexity",31021
+122B,"Admitted, Functional gain, 18-64 years, Moderate HoNOS complexity",31021
+122Z,"Admitted, Functional gain, 18-64 years, Unknown HoNOS",31021
+123A,"Admitted, Functional gain, 65+ years, High HoNOS complexity",31031
+123B,"Admitted, Functional gain, 65+ years, Moderate HoNOS complexity",31031
+123Z,"Admitted, Functional gain, 65+ years, Unknown HoNOS",31031
+131A,"Admitted, Intensive extended, 0-17 years, High HoNOS complexity",31011
+131B,"Admitted, Intensive extended, 0-17 years, Moderate HoNOS complexity",31011
+131Z,"Admitted, Intensive extended, 0-17 years, Unknown HoNOS",31011
+132A,"Admitted, Intensive extended, 18-64 years, High HoNOS complexity",31021
+132B,"Admitted, Intensive extended, 18-64 years, Moderate HoNOS complexity",31021
+132Z,"Admitted, Intensive extended, 18-64 years, Unknown HoNOS",31021
+133A,"Admitted, Intensive extended, 65+ years, High HoNOS complexity",31031
+133B,"Admitted, Intensive extended, 65+ years, Moderate HoNOS complexity",31031
+133Z,"Admitted, Intensive extended, 65+ years, Unknown HoNOS",31031
+141A,"Admitted, Consolidating gain, 0-17 years, High HoNOS complexity",31011
+141B,"Admitted, Consolidating gain, 0-17 years, Moderate HoNOS complexity",31011
+141Z,"Admitted, Consolidating gain, 0-17 years, Unknown HoNOS",31011
+142A,"Admitted, Consolidating gain, 18-64 years, High HoNOS complexity",31021
+142B,"Admitted, Consolidating gain, 18-64 years, Moderate HoNOS complexity",31021
+142Z,"Admitted, Consolidating gain, 18-64 years, Unknown HoNOS",31021
+143A,"Admitted, Consolidating gain, 65+ years, High HoNOS complexity",31031
+143B,"Admitted, Consolidating gain, 65+ years, Moderate HoNOS complexity",31031
+143Z,"Admitted, Consolidating gain, 65+ years, Unknown HoNOS",31031
+191Z,"Admitted, Unknown phase, 0-17 years",31011
+192Z,"Admitted, Unknown phase, 18-64 years",31021
+193Z,"Admitted, Unknown phase, 65+ years",31031
