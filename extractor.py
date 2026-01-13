@@ -98,7 +98,7 @@ splash_screen.configure(bg="white")
 # Open image
 img = Image.open("hssg_logo.jpg")
 # Resize the Image using resize method
-resized_image = img.resize((181, 70), Image.ANTIALIAS)
+resized_image = img.resize((181, 70), Image.LANCZOS)
 # Create an object of tkinter ImageTk
 new_image = ImageTk.PhotoImage(resized_image)
 # Create a Label Widget to display the Image
