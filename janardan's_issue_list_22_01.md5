@@ -1,0 +1,121 @@
+Based on the detailed discussion and screen sharing in the recording, here is an in-depth analysis of the logic, the specific SQL query requirements, the legacy code issues, and approaches to automate the search within the `extractor.py` file.
+
+### 1. Analysis of Janardan’s SQL Update Request
+
+**The Objective:**
+Janardan requires a specific hardcoded mapping to be injected into the SQL queries embedded within the Python script. This is to handle specific "OSP IDs" that require unique facility codes.
+
+**The Fragment to Insert:**
+Janardan provided the specific logic via chat (and verbally). It involves two specific cases that need to be added to a `CASE` statement:
+
+```sql
+WHEN OSP_ID = '3080470' THEN 'M710'
+WHEN OSP_ID = '3080472' THEN 'N752'
+```
+
+**The Condition for Insertion (The 3 Variations):**
+Janardan emphasized that this fragment should **not** be applied blindly to every `CASE` statement involving `OSP_ID`. He identified three distinct variations of `CASE` statements currently existing in the legacy code:
+
+*   **Version 1 (Target):** Calculates `OSP_HIE_FAC_ID` (The Health Infrastructure Facility ID).
+    *   *Logic:* `CASE WHEN ... THEN OSP_HIE_FAC_ID ... END`
+    *   *Action:* **Apply the fix here.**
+*   **Version 2 (Exclude):** Calculates or passes through `OSP_ID`.
+    *   *Logic:* `CASE WHEN ... THEN OSP_ID ... END`
+    *   *Action:* Do not touch.
+*   **Version 3 (Exclude):** Calculates `OSP_TYP_CD` (Type Code).
+    *   *Logic:* `CASE WHEN ... THEN OSP_TYP_CD ... END`
+    *   *Action:* Do not touch.
+
+**Placement Logic:**
+Janardan instructed Raymond to place the new fragment **at the start of the CASE statement** (specifically after `CASE` and before the existing logic). This implies a hierarchy of precedence; these specific OSP IDs must start using the new codes (`M710`, `N752`) immediately, overriding any subsequent logic that might otherwise catch them.
+
+---
+
+### 2. Analysis of "Queries Going Over Multiple Lines"
+
+When Janardan and Raymond discuss "queries going over multiple lines," they are referring to the formatting of the SQL string literals embedded within the Python code.
+
+**The Problem:**
+The original developers did not adhere to a consistent style guide for embedding SQL in Python.
+*   **Single-line formatting:** `query = "SELECT CASE WHEN a=b THEN c END FROM table"`
+*   **Multi-line formatting (Concatenation):**
+    ```python
+    query = "SELECT CASE " + \
+            "WHEN a=b THEN c END " + \
+            "FROM table"
+    ```
+*   **Multi-line formatting (Triple Quotes):**
+    ```python
+    query = """
+    SELECT CASE
+        WHEN a=b THEN c
+    END FROM table
+    """
+  ```
+
+**The Impact on Searching:**
+Because the formatting varies wildly, a simple text search (Ctrl+F) for a string like `"CASE WHEN OSP_ID"` fails.
+*   In one instance, there might be a newline character (`\n`) between `CASE` and `WHEN`.
+*   In another, there might be 5 spaces.
+*   In another, there might be a Python string concatenation closure (`" + "`).
+
+This explains why Raymond's search for the "Version 1" pattern was returning inconsistent results (finding 47 instances one moment, 20 another, depending on how specific the string match was).
+
+---
+
+### 3. Analysis of the Original Developer's Implementation
+
+The analysis of the `extractor.py` file reveals a "Monolithic" and inefficient coding style often referred to as "Spaghetti Code" or "Copy-Paste Programming."
+
+**Key Characteristics of the Legacy Code:**
+1.  **Lack of Modularity:** Instead of creating a single Python function that generates the SQL query dynamically based on parameters, the developers seemingly wrote a fresh SQL query string for every single extraction event.
+2.  **Inconsistent Syntax:**
+    *   **Aliases:** In one query, a subquery might be aliased as `A`. In the next copy-pasted version, it might be aliased as `B` or `sub1`.
+    *   **Whitespace:** Random spacing between commas, operators, and keywords.
+    *   **Structure:** Some queries include `DISTINCT`, others do not. Some have extra columns, some do not.
+3.  **Hard-Coding:** The logic relies on hard-coded SQL strings rather than an ORM (Object Relational Mapper) or stored procedures.
+
+**The Consequence:**
+To apply a business rule change (like adding the two OSP_IDs), the team cannot change the logic in one place. They must find every distinct "copy-pasted" variation of that logic across 44,000 lines and manually patch it, ensuring they don't break the subtle syntax variations in each instance.
+
+---
+
+### 4. Brainstorming Python Search Approaches
+
+Given the massive size of the file (44k lines) and the inconsistent formatting, standard text editors (VS Code, Notepad++) are insufficient for *reliable* identification. You need a script that normalizes the text before searching.
+
+Here are Python-based approaches to locate the target SQL blocks:
+
+**Approach A: Regex with Whitespace Flexibility (The "Quick" Fix)**
+You can write a Python script to read `extractor.py` and use Regular Expressions (Regex) that treat all whitespace (spaces, tabs, newlines) as equal.
+
+*   *Logic:* Search for the pattern `CASE\s+WHEN.*OSP_HIE_FAC_ID`.
+*   *Why:* `\s+` matches one or more whitespace characters, including the newlines that are breaking Raymond's Ctrl+F searches.
+
+**Approach B: The "Tokenization" Approach (More Robust)**
+1.  Read the `extractor.py` file line by line.
+2.  Identify variables that hold SQL strings.
+3.  Strip all newlines, tabs, and Python concatenation characters (`"`, `'`, `+`, `\`) from those specific lines to create a "normalized" single line of SQL text in memory.
+4.  Search the normalized line for the "Version 1" signature (`THEN OSP_HIE_FAC_ID`).
+5.  If found, print the original line number in the `extractor.py` file.
+
+**Approach C: Reverse-Search Anchor**
+Since the `CASE` statement formatting is messy, searching for the *result* might be easier.
+1.  Search for the distinct column alias or result logic: `OSP_HIE_FAC_ID`.
+2.  Once found on Line X, define a logic that reads *backwards* (up the file) to find the nearest `CASE` keyword.
+3.  This identifies the "Start" of the block where Janardan's fragment needs to be inserted.
+
+---
+
+### 5. Refining the Response: What I Need From You
+
+To provide you with the exact Python script or Regex pattern to solve this for the team, I cannot work with the full file, but I need specific **patterns**.
+
+**Please provide:**
+1.  **3 to 5 examples of the "Version 1" SQL query** as they appear in the Python code.
+    *   *Crucial:* I need the exact Python syntax surrounding them. (e.g., Is it `sql = "..."`? Is it inside a dictionary `queries = {"key": "..."}`?)
+    *   *Crucial:* Include one example that is on a single line, and one example that is "split across multiple lines" as Janardan described.
+2.  **The surrounding Python context:** Are these queries inside functions? Are they global variables?
+3.  **The exact variable names** used for the HIE Facility ID in the different variations (confirming if it is always `OSP_HIE_FAC_ID` or if `HI_FACILITY_ID` is used interchangeably).
+
+With these snippets, I can construct a Python "Seek and Destroy" script that creates a normalized view of their code, locates the specific insertion points regardless of formatting, and outputs the line numbers requiring the update.
